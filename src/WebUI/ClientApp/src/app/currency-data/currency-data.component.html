@@ -1,0 +1,25 @@
+<h1 id="tableLabel">Currency Data</h1>
+<p>This component demonstrates fetching data from the server.</p>
+<p *ngIf="!currencies"><em>Loading...</em></p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="currencies">
+  <thead>
+    <tr>
+      <th>Base Currency</th>
+      <th>Base Name</th>
+      <th>Exchange Rate</th>
+      <th>Target Currency</th>
+      <th>Target Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let currency of currencies">
+      <td>{{ currency.baseCurrency }}</td>
+      <td>{{ currency.baseName }}</td>
+      <td>{{ currency.exchangeRate }}</td>
+      <td>{{ currency.targetCurrency }}</td>
+      <td>{{ currency.targetName }}</td>
+      <td>{{ currency.description }}</td>
+    </tr>
+  </tbody>
+</table>
